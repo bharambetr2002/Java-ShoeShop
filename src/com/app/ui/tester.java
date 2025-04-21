@@ -18,6 +18,7 @@ public class tester {
 				System.out.println("1. Add new Shoes");
 				System.out.println("2. Display All Shoes");
 				System.out.println("3. Search Most Expensive Shoe");
+				System.out.println("4. Remove Shoe Not Available");
 				System.out.println("0. Exit");
 				System.out.println("Enter Your choice");
 				try {
@@ -34,6 +35,10 @@ public class tester {
 							break;
 						case 3:
 							ops.displayExpensideShoe();
+							break;
+						case 4:
+							ops.deleteShoeNotAvailable();
+							break;
 						case 0:
 							exit = false;
 							break;

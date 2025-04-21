@@ -11,4 +11,6 @@ public interface SGMOperations {
 
 	void displayExpensideShoe();
 
+	void deleteShoeNotAvailable();
+
 }

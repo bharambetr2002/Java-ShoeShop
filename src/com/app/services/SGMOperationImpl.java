@@ -52,4 +52,21 @@ public class SGMOperationImpl implements SGMOperations {
 
 	}
 
+	@Override
+	public void deleteShoeNotAvailable() {
+		boolean found = false;
+		var itr = list.iterator();
+		while (itr.hasNext()) {
+			ShoeGallery g = itr.next();
+			if (!g.isAvailble()) {
+				itr.remove();
+				found = true;
+			}
+		}
+		if (found)
+			System.out.println("Removed all unavailable shoes successfully.");
+		else
+			System.out.println("No unavailable shoes found.");
+	}
+
 }
