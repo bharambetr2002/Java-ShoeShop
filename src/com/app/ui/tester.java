@@ -2,11 +2,12 @@ package com.app.ui;
 
 import java.util.Scanner;
 
+import com.app.customerexception.SGMCException;
 import com.app.services.SGMOperationImpl;
 import com.app.services.SGMOperations;
 
 public class tester {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SGMCException {
 		try (Scanner scn = new Scanner(System.in)) {
 			System.out.println("Enter The number of products : ");
 			SGMOperations ops = new SGMOperationImpl(scn.nextInt());
@@ -32,7 +33,7 @@ public class tester {
 							ops.displayAllShoes();
 							break;
 						case 3:
-
+							ops.displayExpensideShoe();
 						case 0:
 							exit = false;
 							break;

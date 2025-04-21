@@ -1,7 +1,7 @@
 package com.app.core;
 
 public class ShoeGallery {
-	private static int idCounter=000;
+	private static int idCounter = 000;
 	private int shoeId;
 	private String name;
 	private String brand;
@@ -9,8 +9,8 @@ public class ShoeGallery {
 	private double price;
 	private boolean isAvailble;
 	private ShoeType type;
-	
-	public ShoeGallery( String name, String brand, int ratings, double price, boolean isAvailble, ShoeType type) {
+
+	public ShoeGallery(String name, String brand, int ratings, double price, boolean isAvailble, ShoeType type) {
 		super();
 		this.shoeId = ++idCounter;
 		this.name = name;
@@ -20,7 +20,7 @@ public class ShoeGallery {
 		this.isAvailble = isAvailble;
 		this.type = type;
 	}
-	
+
 	public ShoeGallery(int shoeId) {
 		super();
 		this.shoeId = shoeId;
@@ -107,6 +107,5 @@ public class ShoeGallery {
 	public void setType(ShoeType type) {
 		this.type = type;
 	}
-	
-	
+
 }
