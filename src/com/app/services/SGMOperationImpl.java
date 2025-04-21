@@ -1,6 +1,8 @@
 package com.app.services;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import com.app.core.ShoeGallery;
 import com.app.core.ShoeType;
@@ -69,4 +71,32 @@ public class SGMOperationImpl implements SGMOperations {
 			System.out.println("No unavailable shoes found.");
 	}
 
+	@Override
+	public void updateShoePrice(double a, String b) {
+		boolean updated = false;
+		for (ShoeGallery g : list) {
+			if (b.equals(g.getBrand())) {
+				// considered user giving a price to increase
+				g.setPrice(g.getPrice() + a);
+				updated = true;
+			}
+		}
+		if (updated == true) {
+			System.out.println("Price Updated");
+		} else {
+			System.out.println("Wrong Brand Name / Brand Not Found");
+		}
+	}
+
+	@Override
+	public void sortDesendingPrice() {
+		Collections.sort(list, new Comparator<ShoeGallery>() {
+			@Override
+			public int compare(ShoeGallery s1, ShoeGallery s2) {
+				// Descending: Higher price comes first
+				return Double.compare(s2.getPrice(), s1.getPrice());
+			}
+		});
+
+	}
 }

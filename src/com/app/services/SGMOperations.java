@@ -13,4 +13,8 @@ public interface SGMOperations {
 
 	void deleteShoeNotAvailable();
 
+	void updateShoePrice(double a, String b);
+
+	void sortDesendingPrice();
+
 }

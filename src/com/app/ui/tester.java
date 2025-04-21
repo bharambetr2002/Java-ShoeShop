@@ -19,6 +19,8 @@ public class tester {
 				System.out.println("2. Display All Shoes");
 				System.out.println("3. Search Most Expensive Shoe");
 				System.out.println("4. Remove Shoe Not Available");
+				System.out.println("5. Update Shoe Price Based on Brand");
+				System.out.println("6. Sort as per desending Price Order");
 				System.out.println("0. Exit");
 				System.out.println("Enter Your choice");
 				try {
@@ -38,6 +40,15 @@ public class tester {
 							break;
 						case 4:
 							ops.deleteShoeNotAvailable();
+							break;
+						case 5: 
+							System.out.println("Enter Price to Increase & Brand : ");
+							double a = scn.nextInt();
+							String b = scn.next();
+							ops.updateShoePrice(a,b);
+							break;
+						case 6: 
+							ops.sortDesendingPrice();
 							break;
 						case 0:
 							exit = false;
